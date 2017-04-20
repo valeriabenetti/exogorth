@@ -2,6 +2,9 @@ require 'httparty'
 require 'json'
 require 'ap'
 
-class StarWars
+films = HTTParty.get("http://swapi.co/api/films/")
 
-end
+questions = JSON(films.body)
+ap questions
+# p film.message
+# p film.headers
